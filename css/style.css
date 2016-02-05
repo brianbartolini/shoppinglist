@@ -27,12 +27,12 @@ i:hover{
 	cursor: pointer;
 }
 
+/*//Header and the container */
 
 .container{
 	height: 20rem;
 	width:  23rem;
 	margin: 5rem auto;
-	/*margin-top: 5rem;*/
 }
 
 .header{
@@ -49,6 +49,8 @@ i:hover{
 	color: white;
 
 }
+
+/*Shopping input section*/
 
 .inputsection {
 	width: 20rem;
@@ -90,6 +92,9 @@ input:focus {
 	color: #444444;
 	
 }
+
+/*Shopping list*/
+
 
 .todo-list{
 	list-style: none;

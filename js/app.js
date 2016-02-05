@@ -1,44 +1,33 @@
 $(document).ready(function() {
 
-// var e = jQuery.Event("keydown");
-// e.which == 13;
-
+// Adding text from shopping input by pressing enter
 
 $(".shoppinglistinput").keydown(function(e){
 	var val = $(".shoppinglistinput").val();
 	var shoppingListDiv = '<li class= "shoppingitem"><input type="checkbox" class="shoppingitem-check"></input>' + val + '<i class="fa fa-trash-o"></i><i class="fa fa-arrows-v"></i>'
-	if (e.keyCode == 13) {
+	if (e.keyCode == 13 && val != '') {
 	$(".todo-list").append(shoppingListDiv);
 	$(".shoppinglistinput").val('');
 	}
 })
 
+// Adding text from shopping input by clicking on the button.
+
 $(".fa-plus-circle").mousedown(function(){
 	var val = $(".shoppinglistinput").val();
 	var shoppingListDiv = '<li class= "shoppingitem"><input type="checkbox" class="shoppingitem-check"></input>' + val + '<i class="fa fa-trash-o"></i><i class="fa fa-arrows-v"></i>'
-	$(".todo-list").append(shoppingListDiv);
-	$(".shoppinglistinput").val('');
+	if( val != '') {
+		$(".todo-list").append(shoppingListDiv);
+		$(".shoppinglistinput").val('');
+}
 });
+
+// Delete shopping list item by clicking button.
 
 
 $(document).on('click', '.fa-trash-o', function(){
 	$(this).parent().remove();
 
 });
-
-// $(document).ready(function() {
-// 	$(".todolist" ).sortable({
-// 		handle:'.drag',
-// 		axis:'y',
-// 	});
-	// $(".todolist" ).disableSelection();
-// });
-
-
-// $(".delete").mousedown(function(){
-// 	console.log("button clicked");
-
-// })
-
 
 });
