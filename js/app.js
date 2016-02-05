@@ -6,22 +6,22 @@ $(document).ready(function() {
 
 $(".shoppinglistinput").keydown(function(e){
 	var val = $(".shoppinglistinput").val();
-	var shoppingListDiv = '<li class= "shoppingitem"><input type="checkbox" class="shoppingitem-check"></input>' + val + '<button class= "delete">Delete</button>'
+	var shoppingListDiv = '<li class= "shoppingitem"><input type="checkbox" class="shoppingitem-check"></input>' + val + '<i class="fa fa-trash-o"></i><i class="fa fa-arrows-v"></i>'
 	if (e.keyCode == 13) {
 	$(".todo-list").append(shoppingListDiv);
 	$(".shoppinglistinput").val('');
 	}
 })
 
-$(".add-input").mousedown(function(){
+$(".fa-plus-circle").mousedown(function(){
 	var val = $(".shoppinglistinput").val();
-	var shoppingListDiv = '<li class= "shoppingitem"><input type="checkbox" class="shoppingitem-check"></input>' + val + '<button class= "delete">Delete</button>'
+	var shoppingListDiv = '<li class= "shoppingitem"><input type="checkbox" class="shoppingitem-check"></input>' + val + '<i class="fa fa-trash-o"></i><i class="fa fa-arrows-v"></i>'
 	$(".todo-list").append(shoppingListDiv);
 	$(".shoppinglistinput").val('');
 });
 
 
-$(document).on('click', '.delete', function(){
+$(document).on('click', '.fa-trash-o', function(){
 	$(this).parent().remove();
 
 });
@@ -42,4 +42,3 @@ $(document).on('click', '.delete', function(){
 
 
 });
-
