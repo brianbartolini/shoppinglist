@@ -24,6 +24,13 @@ $(".fa-plus-circle").mousedown(function(){
 
 // Delete shopping list item by clicking button.
 
+// $(".fa-minus-square-o").mousedown(function(){
+	$(document).on('click', '.fa-minus-square-o', function(){
+	 $('.todo-list li :checked').each(function() {
+		$(this).parent().remove();
+	})
+});
+
 
 $(document).on('click', '.fa-trash-o', function(){
 	$(this).parent().remove();

@@ -10,12 +10,14 @@
 	<script src ="js/app.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700|Roboto:400,300,500,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<script>
     	$(function() {
         	$( ".todo-list" ).sortable ();
            	$( ".todo-list" ).disableSelection ();
        	});
-</script>
+	</script>
 	
 </head>
 <body>
@@ -25,14 +27,14 @@
 			<div class= "inputsection">
 				<input type="text" class="shoppinglistinput" placeholder="Type Shopping Items Here"></input>
 			</div>
-			<div class= "plus"><i class="fa fa-plus-circle fa-2x"></i></div>
-			
+				<div class= "plus"><i class="fa fa-plus-circle fa-2x"></i></div>
 			<nav>	
 				<ul class = "todo-list">
 					<!-- <li class= "shoppingitem"><input type="checkbox" class="shoppingitem-check"></input> task 1 <i class="fa fa-trash-o"></i><i class="fa fa-arrows-v"></i></li> -->
 					
 				</ul>
-			</nav>	
+			</nav>
+			<div class= "deletecheckeditem"> <i class="fa fa-minus-square-o"></i><span class="removeChecked"> Remove all checked items</span></div>	
 		</div>
 
 </body>
